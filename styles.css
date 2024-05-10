@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #404040;
+  margin: 0;
+}
+
+/* =================
+    Typography 
+   ================= */
+
+p {
+  font-size: 1.125rem; /* 18/16 = 1.125 */
+  line-height: 1.35;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40/16 = 2.5 */
+  font-weight: 400;
+  text-shadow: 0 2px 4px #816fca;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36/16 = 2.25 */
+  margin: 0.167em 0;
+}
+
+.beta-text,
+.top-text,
+.subheading {
+  text-transform: uppercase;
+}
+
+.top-text {
+  font-size: 0.875rem;
+  font-weight: 900;
+  padding-top: 0.25em;
+  border-top: 5px solid;
+  order: -1;
+  margin: 0 auto;
+}
+
+.beta-text {
+  font-weight: 900;
+}
+
+.subheading {
+  color: #575757;
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+
+.fine-print {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #858585;
+}
+
+/* =================
+    Flex containers
+   ================= */
+
+.intro,
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+/* =================
+    Intro
+   ================= */
+
+.intro {
+  justify-content: space-between;
+  min-height: 250px;
+  text-align: center;
+  color: #fff;
+  background: #9480e4 url("images/intro-bg.png");
+  background-size: cover;
+  padding-bottom: 1.5em;
+}
+
+/* ====================
+    Main content
+   ==================== */
+
+.main-content {
+  padding-top: 2.5em; /* 40/16 = 2.5 */
+  align-items: center;
+}
+
+.img-main {
+  width: 120px;
+  /* border-radius: 50%; */
+  clip-path: circle(60px at 57px 62px);
+}
+
+.main-content p,
+form {
+  max-width: 450px;
+}
+
+/* =================
+    Form
+   ================= */
+
+input,
+.btn {
+  font-family: inherit;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.btn {
+  border: none;
+  padding: 1em 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #8a71ec;
+  margin-top: 1em;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #b7a7f6;
+  transition: 0.2s;
+}
+
+input {
+  margin-bottom: 0.8em;
+  padding: 0.5em;
+  border: 2px solid #d1d5db;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #8a71ec;
+  background: #e6e8ec;
+}
+
+/* =================
+    Media queries 
+   ================= */
+
+@media (min-width: 576px) {
+  body {
+    display: flex;
+    height: 100vh;
+  }
+  .intro,
+  .main-content {
+    width: 50%;
+  }
+  .main-content {
+    justify-content: center;
+    padding-top: 0;
+  }
+  h1 {
+    font-size: 5vw;
+  }
+  h2 {
+    font-size: 2.625rem;
+  }
+  .beta-text {
+    font-size: 1.25rem;
+  }
+  .img-main {
+    margin-top: 0.5em;
+  }
+}
+
+/* concepts covered:
+- change case of text
+- viewport units
+- flexbox order
+- box sizing
+- style form el, modifiers
+*/
